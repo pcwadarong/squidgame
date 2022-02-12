@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Dalgona</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link type="text/css" rel="stylesheet"
+    href="https://www.gstatic.com/og/_/ss/k=og.qtm.3HlVaVE5EQY.L.W.O/m=qdid,qcwid/excm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/ct=zgms/rs=AA2YrTs_9K3WhHZOE0jDUhrfW6JcqkFhmA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="./script/jquery-2.1.3.min.js"></script>
+  <script src="./script/jquery.easing.1.3.js"></script>
+</head>
+
+<body>
+  <!--startpage-->
+  <div id="startpage">
+    <div id="startpage_contents">
+      <img src="./images/card.png" width="439.567px">
+      <h2 id="greeting">x</h2>
+      <button id='start' onclick="start_click();" >> GAME START <</button>
+    </div>
+  </div>
+
+  <!--title-->
+  <header>
+    <img src=./images/title.gif>
+    <a class="scroll" href="#explain_section">
+      <div>
+        <h3>SCROLL DOWN</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="33.68" height="25.554" viewBox="0 0 33.68 25.554">
+          <g id="그룹_720" data-name="그룹 720" transform="translate(-943.086 -991.198)">
+            <path id="패스_627" data-name="패스 627" d="M6145.383-8364.388l15.426,15.426,15.426-15.426"
+              transform="translate(-5200.883 9357)" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" />
+            <path id="패스_629" data-name="패스 629" d="M6145.383-8364.388l15.426,15.426,15.426-15.426"
+              transform="translate(-5200.883 9364.714)" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" />
+          </g>
+        </svg>
+      </div>
+    </a>
+  </header>
+
+  <nav>
+    <div class="menu" data-parallax='{"from-scroll":2300, "distance":0, "smoothness":0, "op":-1}'>
+      <span class="menu_black"
+        data-parallax='{"from-scroll":442, "distance":0, "smoothness":0, "op":0}'>Introduction</span>
+    </div>
+
+    <div class="menu" data-parallax='{"from-scroll":8880, "distance":0, "smoothness":0, "op":-1}'>
+      <span class="menu_white" data-parallax='{"from-scroll":2376, "distance":0, "smoothness":0, "op":0}'>Dalgona
+        Making</span>
+    </div>
+
+    <div class="menu" data-parallax='{"from-scroll":12169, "distance":0, "smoothness":0, "op":-1}'>
+      <span class="menu_white" data-parallax='{"from-scroll":9019, "distance":0, "smoothness":0, "op":0}'>Drawing
+        Yeot</span>
+    </div>
+
+    <div class="menu" data-parallax='{"from-scroll":22574, "distance":0, "smoothness":0, "op":-1}'>
+      <span class="menu_black" data-parallax='{"from-scroll":12280, "distance":0, "smoothness":0, "op":0}'>Dalgona
+        Coffee</span>
+    </div>
+
+    <div class="menu">
+      <span class="menu_white"
+        data-parallax='{"from-scroll":22683.333984375, "distance":0, "smoothness":0, "op":0}'>Success</span>
+    </div>
+  </nav>
+
+  <!--introduction-->
+  <section id="explain_section">
+    <h3>달고나 게임에 오신 여러분을 환영합니다.<br>게임을 시작하기 전에 달고나에 대해 소개하겠습니다.</h3>
+
+    <div class="contents">
+      <div class="explain_left">
+        <div class="explain_img" id="ex_img_1"
+          data-parallax='{"from-scroll":850, "distance":200, "smoothness":0, "op":0}'>
+          <img id="ex_img_1_1" src="./images/포도당.png" width="235px"
+            data-parallax='{"y":50, "from-scroll":950, "distance":200, "smoothness":20}'>
+          <img src="./images/포도당1.png" width="188px">
+        </div>
+        <div class="explain">
+          <span>달고나</span>
+          <p>본래의 달고나는 다양한 색상과 엄지손가락만한 크기를 가진 포도당 덩어리를 녹여먹는 것으로, 연탄 화로에서 국자와 젓가락을 이용해 달고나를 녹인 뒤 식소다로 적당히 부풀려서 찍고 마셔 없애는
+            간식거리였습니다. 흔히 알려진 납작한 모양과 노란색 색상을 가진 간식은 ‘뽑기’라고 불리며 서로 구분되었지만, 달고나가 뽑기에 비해 녹는 시간이 길고 가격이 비싸 점점 사라지면서 달고나는 뽑기와
+            함께 혼용되어 사용되기 시작하였습니다.</p>
+        </div>
+      </div>
+
+      <div class="explain_right">
+        <div class="explain">
+          <span>뽑기</span>
+          <p>뽑기는 설탕과 탄산수소나트륨(베이킹 소다)을 섞은 후 불로 가열하고, 납작하게 하여 틀로 모양을 찍어 쪼개 먹는 놀이입니다. 뽑기는 1970~80년대부터 2000년대 초반까지 한국 길거리에서
+            자주 볼 수 있었으며 문방구 등지에서 국자와 나무젓가락, 연탄불을 이용해 각자 제조하고 찍힌 문양이 깔끔하게 떼어질 경우 한번의 기회가 더 주어지기도 했습니다. 뽑기는 달고나 외에도 지역에 따라
+            띠기나 똥꽈자 등 다양한 이름으로 불리곤 합니다.</p>
+        </div>
+        <div class="explain_img" data-parallax='{"from-scroll":1100, "distance":200, "smoothness":0, "op":0}'>
+          <img src="./images/뽑기.png" width="212px">
+        </div>
+      </div>
+
+      <div class="explain_left">
+        <div class="explain_img" data-parallax='{"from-scroll":1400, "distance":200, "smoothness":0, "op":0}'>
+          <img src="./images/잉어엿.png" width="276px">
+        </div>
+        <div class="explain">
+          <span>설탕 엿</span>
+          <p>포도당의 ‘달고나’와 모양틀을 찍는 ‘뽑기’ 외에도 설탕을 녹인 후 다양하고 화려한 틀에 맞춰 굳힌 간식거리도 존재합니다. 이 뽑기는 탄산수소나트륨(베이킹 소다)가 첨가되지 않아 엿과 같이
+            투명한 형태를 띄고 있습니다. 앞의 두가지와는 다르게 손님은 직접 제조하지 않고, 단지 뽑기판에서 게임으로 번호를 뽑는 형식을 취해 랜덤으로 달고나를 가지게 되는 형식입니다. 달고나의 모양과
+            크기는 아주 다양하고, 주로 총, 배, 용, 자동차, 거북선, 잉어 등의 형태로 구성됩니다.</p>
+        </div>
+      </div>
+
+      <div class="explain_right">
+        <div class="explain">
+          <span>달고나 커피</span>
+          <p>코로나 19 바이러스가 유행하면서 자가 격리로 인해 집에 머무는 시간이 많아진 사람들 사이에서 곧 ‘달고나 커피’가 유행하게 되었습니다. 달고나 커피는 커피 가루와, 설탕, 뜨거운 물을
+            1:1:1 비율로 넣고 매우 많이 저어 만든 거품을 물이나 우유에 타 먹는 커피 음료입니다. Vlive와 유튜브 컨텐츠를 통해 한국에서 유행이 시작되자, TikTok의 K-POP 팬들을 중심으로
+            'Dalgona Coffee'라는 이름 그대로 해외로까지 알려지게 되었습니다. 초기 달고나 커피에는 실제 달고나가 들어가지 않았지만, 원재료가 비슷하여 색과 질감, 맛이 달고나와 유사하다고 볼
+            수 있습니다.</p>
+        </div>
+        <div class="explain_img" data-parallax='{"from-scroll":1700, "distance":200, "smoothness":0, "op":0}'>
+          <img src="./images/달고나커피.png" width="159px">
+        </div>
+      </div>
+    </div>
+
+    <h3>그럼, 게임을 시작하겠습니다.<br>게임은 총 세단계이며, 제한시간은 10분입니다.</h3>
+  </section>
+
+  <div class="timer">
+    <h3 id="timer">10:00</h3>
+  </div>
+
+  <!--game1-->
+  <section id="dalgona_making">
+
+    <h3>1단계는 달고나 뽑기입니다.<br>제한 시간 안에 뽑기를 만들고 모양을 깨끗이 잘라내면 성공입니다.</h3>
+
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <div class="ingredient">
+        <img src="./images/누름판.png" width="284px">
+        <p>누름판</p>
+      </div>
+      <div class="ingredient">
+        <img src="./images/동국자.png" width="299.06px">
+        <p>동국자</p>
+      </div>
+      <div class="ingredient">
+        <img src="./images/누르개.png" width="188.19px">
+        <p>누르개</p>
+      </div>
+      <div class="ingredient">
+        <img src="./images/황설탕.png" width="219.28px">
+        <p>황설탕</p>
+      </div>
+      <div class="ingredient">
+        <img src="./images/식소다.png" width="187.47px">
+        <p>식소다</p>
+      </div>
+      <div class="ingredient">
+        <img src="./images/젓가락.png" width="148.03px">
+        <p>막대</p>
+      </div>
+      <div class="ingredient">
+        <img src="./images/찍기.png" width="226.59px">
+        <p>모양틀</p>
+      </div>
+    </div>
+    <div class="making" data-parallax='{"y":3400, "from-scroll":3800, "distance":3400, "smoothness":0}'>
+
+      <div class="method_cover" data-parallax='{"from-scroll":4200, "distance":0, "op":-1}'>
+        <div class="method">
+          <img src="./images/동국자1-1.png" width="898px">
+          <span>1. 설탕을 넣고 약한 불 위에서 젓가락을 이<br>용해 끈적한 누런 색을 띌 때까지 젓습니다.</span>
+        </div>
+      </div>
+
+      <div class="method_cover" data-parallax='{"from-scroll":4700, "distance":0, "op":-1}'>
+        <div class="method" data-parallax='{"from-scroll":4300, "distance":0, "op":0}'>
+          <img src="./images/동국자1-2.png" width="898px">
+          <span data-parallax='{"from-scroll":4400, "distance":0, "op":0}'>2. 소다를 소량 넣고 완전히 불투명한<br>갈색이 될 때까지 다시
+            젓습니다.</span>
+        </div>
+      </div>
+
+      <div class="method_cover" data-parallax='{"from-scroll":5300, "distance":0, "op":-1}'>
+        <div class="method" data-parallax='{"from-scroll":4800, "distance":0, "op":0}'>
+          <img src="./images/누름판2.png" width="896px">
+          <span id="mk_3" data-parallax='{"from-scroll":4900, "distance":0, "op":0}'>3. 접시 혹은 평평한 판에 모조리 긁어
+            부어줍니다.</span>
+        </div>
+      </div>
+
+      <div class="method_cover" data-parallax='{"from-scroll":6000, "distance":0, "op":-1}'>
+        <div class="method" data-parallax='{"from-scroll":5400, "distance":0, "op":0}'>
+          <img src="./images/누름판2.png" width="896px">
+          <img id="mk_눌린_달고나" data-parallax='{"from-scroll":5570, "distance":0, "op":0}' src="./images/눌린 달고나.png"
+            width="549px">
+          <img id="mk_누르개" data-parallax='{"y":68,"from-scroll":5500, "distance":0, "op":0}' src="./images/누르개.png"
+            width="442px">
+          <span id="mk_3" data-parallax='{"from-scroll":5500, "distance":0, "op":0}'>4. 달고나가 약간 식으면, 누르개로 지그시 눌러<br>납작하게
+            펴줍니다.</span>
+        </div>
+      </div>
+
+      <div class="method_cover" data-parallax='{"from-scroll":6600, "distance":0, "op":-1}'>
+        <div class="method" data-parallax='{"from-scroll":6100, "distance":0, "op":0}'>
+          <img src="./images/누름판2.png" width="896px">
+          <img id="mk_눌린_달고나" src="./images/눌린 달고나2.png" width="549px">
+          <img id="mk_찍기" src="./images/찍기2.png" width="562px">
+          <img id="mk_누르개" data-parallax='{"y":68,"from-scroll":6200, "distance":0, "op":0}' src="./images/누르개.png"
+            width="442px">
+          <span id="mk_3" data-parallax='{"from-scroll":6200, "distance":0, "op":0}'>5. 모양 틀이 있을 경우 틀을 대고 다시 한번
+            누릅니다.</span>
+        </div>
+      </div>
+
+      <div class="method_cover">
+        <div class="method" data-parallax='{"from-scroll":6700, "distance":0, "op":0}'>
+          <img src="./images/누름판.png" width="896px">
+          <img id="mk_잘린_달고나" src="./images/잘린 달고나.png" width="663px">
+          <span id="mk_3" data-parallax='{"from-scroll":6800, "distance":0, "op":0}'>6. 틀을 조심히 떼어낸 후 이쑤시개를 이용해
+            깔끔하게<br>모양을 분리합니다.
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="successpage">
+    <div class="successpage_contents">
+      <img src="./images/달고나조각.png" width="332px">
+      <h1>MISSISION CLEAR !</h1>
+      <p>1단계 성공을 축하합니다.</p>
+    </div>
+    <a class="scroll" href="#drawing_yeot">
+      <div>
+        <h3>SCROLL DOWN</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="33.68" height="25.554" viewBox="0 0 33.68 25.554">
+          <g id="그룹_720" data-name="그룹 720" transform="translate(-943.086 -991.198)">
+            <path id="패스_627" data-name="패스 627" d="M6145.383-8364.388l15.426,15.426,15.426-15.426"
+              transform="translate(-5200.883 9357)" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" />
+            <path id="패스_629" data-name="패스 629" d="M6145.383-8364.388l15.426,15.426,15.426-15.426"
+              transform="translate(-5200.883 9364.714)" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" />
+          </g>
+        </svg>
+      </div>
+    </a>
+  </section>
+
+  <!--game2-->
+  <section id="drawing_yeot">
+    <h3>2단계는 설탕 엿 뽑기입니다.<br>제한 시간 안에 게임에 도전하여 잉어엿을 뽑으면 성공입니다.</h3>
+
+    <div class="contents">
+      <h3>아래 숫자 중 1개를 고르세요.</h3>
+
+      <div id="table">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>10</button>
+        <button>11</button>
+        <button>12</button>
+        <button>13</button>
+        <button>14</button>
+        <button onclick="correct();">15</button>
+        <button>16</button>
+        <button>17</button>
+        <button>18</button>
+        <button>19</button>
+        <button>20</button>
+      </div>
+
+      <div id="roulette">
+        <img id="rouletteimg" src="./images/roulette.png" width="770px">
+        <button onclick="rotate_roulette();">START</button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32.214" height="35.402" viewBox="0 0 32.214 35.402">
+          <path id="패스_536" data-name="패스 536" d="M368.893,20.3l17.27,33.429L401.107,20.3a66.552,66.552,0,0,0-32.214,0"
+            transform="translate(-368.893 -18.329)" fill="#2f1022" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="result">
+      <div class="successpage" id="second_success">
+        <div class="successpage_contents">
+          <img src="./images/잉어엿.png" width="402px">
+          <h1>MISSISION CLEAR !</h1>
+          <p>2단계 성공을 축하합니다.</p>
+        </div>
+        <a class="scroll" href="#dalgona_coffee">
+          <div>
+            <h3>SCROLL DOWN</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="33.68" height="25.554" viewBox="0 0 33.68 25.554">
+              <g id="그룹_720" data-name="그룹 720" transform="translate(-943.086 -991.198)">
+                <path id="패스_627" data-name="패스 627" d="M6145.383-8364.388l15.426,15.426,15.426-15.426"
+                  transform="translate(-5200.883 9357)" fill="none" stroke="#fff" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" />
+                <path id="패스_629" data-name="패스 629" d="M6145.383-8364.388l15.426,15.426,15.426-15.426"
+                  transform="translate(-5200.883 9364.714)" fill="none" stroke="#fff" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" />
+              </g>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="successpage" id="second_failed">
+        <div class="successpage_contents">
+          <h1>꽝!</h1>
+          <a href="#drawing_yeot"><button id="failed" onclick="reset_roulette();">
+              <span>TRY AGAIN</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="46.2" height="11" viewBox="0 0 46.2 11">
+                <path id="패스_537" data-name="패스 537" d="M5924.137,5161.114h43.372l-11.409-9.221"
+                  transform="translate(-5924.137 -5151.114)" fill="none" stroke="#fff" stroke-width="2" />
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+
+  </section>
+
+  <!--game3-->
+  <section id="dalgona_coffee">
+    <h3>3단계는 달고나 커피 만들기입니다.<br>제한 시간 안에 커피를 완성시키면 성공입니다.</h3>
+
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <div class="ingredient">
+        <img src="./images/커피가루.png" width="219.28px">
+        <p>커피가루</p>
+      </div>
+      <div class="ingredient" id="sugar">
+        <img src="./images/황설탕.png" width="219.28px">
+        <p>설탕</p>
+      </div>
+      <div class="ingredient" id="milk">
+        <img src="./images/우유.png" width="160px">
+        <p>우유</p>
+      </div>
+      <div class="ingredient">
+        <img src="./images/물.png" width="180px">
+        <p>물</p>
+      </div>
+
+    </div>
+    <div class="making2">
+      <div class="method2" id="cf_1">
+        <img src="./images/달고나커피1.png" width="480px">
+        <span data-parallax='{"y":-50, "from-scroll":13750, "distance":200, "smoothness":0, "op":0}'>1. 커피가루와 설탕, 뜨거운 물을
+          <br>1:1:1 비율로 혼합합니다.</span>
+      </div>
+
+      <div class="method2" id="cf_2">
+        <img src="./images/달고나커피2.png" width="480px">
+        <span data-parallax='{"y":-50, "from-scroll":14750, "distance":200, "smoothness":0, "op":0}'>2. 꾸덕꾸덕하여 잘 분리되지 않을
+          <br>때까지 반복하여 저어줍니다.</span>
+        <span data-parallax='{"y":-50, "from-scroll":14750, "distance":200, "smoothness":0, "op":0}'>(*전동 거품기 사용을
+          추천합니다.)</span>
+      </div>
+
+      <div class="method2" id="cf_3" data-parallax='{"y":1800, "from-scroll":16100, "distance":1800, "smoothness":0}'>
+        <img src="./images/달고나커피3.png" width="480px">
+        <div id="scrollbar">
+          <div id="gauge" data-parallax='{"x":500, "from-scroll":16100, "distance":2000, "smoothness":0}'></div>
+        </div>
+        <span>SCROLLING FAST!</span>
+      </div>
+
+      <div class="method2" data-parallax='{"y":2000, "from-scroll":19000, "distance":2000, "smoothness":0}'>
+
+        <div class="method2_1" id="cf_4" data-parallax='{"x":216, "from-scroll":19000, "distance":600, "smoothness":0}'
+          data-parallax2='{"from-scroll":20000, "distance":0, "op":-1}'>
+          <span data-parallax='{"y":-400, "from-scroll":19600, "distance": 400, "smoothness":0}'>준비한 컵에 우유를 반쯤
+            붓습니다.</span>
+          <img data-parallax='{"y":-100, "from-scroll":19600, "distance": 400, "smoothness":0}' src="./images/우유.png"
+            width="354.1px">
+        </div>
+
+        <div class="method2_1" id="cf_5" data-parallax='{"from-scroll":20000, "distance":0, "op":0}'>
+          <img data-parallax='{"x":-432, "from-scroll":20000, "distance":600, "smoothness":0}'
+            data-parallax2='{"from-scroll":20600, "distance":0, "op":-1}' src="./images/달고나커피4.png" width="354.1px">
+          <span data-parallax='{"x":432, "from-scroll":20000, "distance":600, "smoothness":0}'
+            data-parallax2='{"from-scroll":20600, "distance":0, "op":-1}'>우유를 붓고, 만들어진 크림을 올립니다.</span>
+        </div>
+
+        <div class="method2_1" id="cf_6" data-parallax='{"from-scroll":20600, "distance":0, "op":0}'>
+          <span>취향껏 꾸며서 완성합니다.</span>
+          <img src="./images/달고나커피.png" width="354.1px">
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </section>
+
+  <section class="successpage" id="third_success">
+    <div class="successpage_contents">
+      <img src="./images/달고나커피.png" width="222px">
+      <h1>MISSISION CLEAR !</h1>
+      <p>3단계 성공을 축하합니다.</p>
+    </div>
+    <a class="scroll" href="#final">
+      <div>
+        <h3>FINISH</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="33.68" height="25.554" viewBox="0 0 33.68 25.554">
+          <g id="그룹_720" data-name="그룹 720" transform="translate(-943.086 -991.198)">
+            <path id="패스_627" data-name="패스 627" d="M6145.383-8364.388l15.426,15.426,15.426-15.426"
+              transform="translate(-5200.883 9357)" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" />
+            <path id="패스_629" data-name="패스 629" d="M6145.383-8364.388l15.426,15.426,15.426-15.426"
+              transform="translate(-5200.883 9364.714)" fill="none" stroke="#fff" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" />
+          </g>
+        </svg>
+      </div>
+    </a>
+  </section>
+
+  <!--final-->
+  <section id="final">
+    <div class="final_contents">
+      <img src="./images/timer.png" width="123px">
+      <h1>MISSISION CLEAR !</h1>
+      <p>최종 성공을 축하합니다.</p>
+      <div id="final_img">
+        <img src="./images/뽑기.png" width="120px">
+        <img src="./images/잉어엿.png" width="150px">
+        <img src="./images/달고나커피.png" width="100px">
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <footer>
+    <div id="footer">
+      <div class="footer_contents">
+        <h1>Connect<br>with us.</h1>
+        <p>+82 1234 5678<br>dalgona@mail.com</p>
+      </div>
+
+      <div class="footer_contents"></div>
+
+      <div class="footer_contents">
+        <h3>OFFICE</h3>
+        <p>497 Evergreen Rd. Roseville, CA 95673<br>+44 345 678 903</p>
+      </div>
+
+      <div class="footer_contents">
+        <h3>MENU</h3>
+        <a href="#explain_section">Introduction</a>
+        <a href="#dalgona_making">Dalgona</a>
+        <a href="#drawing_yeot">Draw Yeot</a>
+        <a href="#dalgona_coffee">Dalgona Coffee</a>
+      </div>
+
+      <div class="footer_contents">
+        <h3>SNS</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+          <path id="패스_40" data-name="패스 40"
+            d="M7,1.244a21.463,21.463,0,0,1,2.8.078,3.607,3.607,0,0,1,1.322.233,2.732,2.732,0,0,1,1.322,1.322A3.607,3.607,0,0,1,12.678,4.2c0,.7.078.933.078,2.8a21.463,21.463,0,0,1-.078,2.8,3.607,3.607,0,0,1-.233,1.322,2.732,2.732,0,0,1-1.322,1.322,3.607,3.607,0,0,1-1.322.233c-.7,0-.933.078-2.8.078a21.463,21.463,0,0,1-2.8-.078,3.607,3.607,0,0,1-1.322-.233,2.732,2.732,0,0,1-1.322-1.322A3.607,3.607,0,0,1,1.322,9.8c0-.7-.078-.933-.078-2.8a21.463,21.463,0,0,1,.078-2.8,3.607,3.607,0,0,1,.233-1.322A2.793,2.793,0,0,1,2.1,2.1a1.315,1.315,0,0,1,.778-.544A3.607,3.607,0,0,1,4.2,1.322,21.463,21.463,0,0,1,7,1.244M7,0A22.981,22.981,0,0,0,4.122.078,4.8,4.8,0,0,0,2.411.389a3.045,3.045,0,0,0-1.244.778A3.045,3.045,0,0,0,.389,2.411,3.544,3.544,0,0,0,.078,4.122,22.981,22.981,0,0,0,0,7,22.981,22.981,0,0,0,.078,9.878a4.8,4.8,0,0,0,.311,1.711,3.045,3.045,0,0,0,.778,1.244,3.045,3.045,0,0,0,1.244.778,4.8,4.8,0,0,0,1.711.311A22.981,22.981,0,0,0,7,14a22.981,22.981,0,0,0,2.878-.078,4.8,4.8,0,0,0,1.711-.311,3.263,3.263,0,0,0,2.022-2.022,4.8,4.8,0,0,0,.311-1.711C13.922,9.1,14,8.867,14,7a22.981,22.981,0,0,0-.078-2.878,4.8,4.8,0,0,0-.311-1.711,3.045,3.045,0,0,0-.778-1.244A3.045,3.045,0,0,0,11.589.389,4.8,4.8,0,0,0,9.878.078,22.981,22.981,0,0,0,7,0M7,3.422A3.52,3.52,0,0,0,3.422,7,3.578,3.578,0,1,0,7,3.422M7,9.333A2.292,2.292,0,0,1,4.667,7,2.292,2.292,0,0,1,7,4.667,2.292,2.292,0,0,1,9.333,7,2.292,2.292,0,0,1,7,9.333m3.733-6.922a.856.856,0,1,0,.856.856.863.863,0,0,0-.856-.856"
+            fill="#fff" fill-rule="evenodd" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11.356" viewBox="0 0 14 11.356">
+          <path id="패스_39" data-name="패스 39"
+            d="M42.433,13.356A8.094,8.094,0,0,0,50.6,5.189V4.8A6.322,6.322,0,0,0,52,3.322a6.457,6.457,0,0,1-1.633.467,3.026,3.026,0,0,0,1.244-1.556,7.134,7.134,0,0,1-1.789.7A2.778,2.778,0,0,0,47.722,2a2.922,2.922,0,0,0-2.878,2.878,1.516,1.516,0,0,0,.078.622,8.041,8.041,0,0,1-5.911-3.033,2.979,2.979,0,0,0-.389,1.478,3.09,3.09,0,0,0,1.244,2.411,2.622,2.622,0,0,1-1.322-.389h0a2.843,2.843,0,0,0,2.333,2.8,2.4,2.4,0,0,1-.778.078,1.324,1.324,0,0,1-.544-.078,2.947,2.947,0,0,0,2.722,2.022A5.872,5.872,0,0,1,38.7,12.033a2.153,2.153,0,0,1-.7-.078,7.341,7.341,0,0,0,4.433,1.4"
+            transform="translate(-38 -2)" fill="#fff" fill-rule="evenodd" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="7.311" height="14" viewBox="0 0 7.311 14">
+          <path id="패스_38" data-name="패스 38"
+            d="M84.744,14V7.622h2.178l.311-2.489H84.744V3.578c0-.7.233-1.244,1.244-1.244h1.322V.078C87,.078,86.222,0,85.367,0a3,3,0,0,0-3.189,3.267V5.133H80V7.622h2.178V14Z"
+            transform="translate(-80)" fill="#fff" fill-rule="evenodd" />
+        </svg>
+      </div>
+    </div>
+    <a id="MOVE_TOP_BTN" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="43.191" height="43.191"
+        viewBox="0 0 43.191 43.191">
+        <g id="그룹_716" data-name="그룹 716" transform="translate(-1818 -21689.563)">
+          <path id="패스_494" data-name="패스 494" d="M21.6,0A21.6,21.6,0,1,1,0,21.6,21.6,21.6,0,0,1,21.6,0Z"
+            transform="translate(1818 21689.564)" fill="rgba(235,227,194,0.2)" />
+          <g id="구성_요소_2" data-name="구성 요소 2" transform="translate(1828.692 21700.256)">
+            <path id="패스_10" data-name="패스 10"
+              d="M10.9,0,8.921,1.982l7.505,7.505H0V12.32H16.426L8.921,19.825,10.9,21.807l10.9-10.9Z"
+              transform="translate(0 21.807) rotate(-90)" fill="#fff" />
+          </g>
+        </g>
+      </svg>
+    </a>
+  </footer>
+
+  <!-- jQuery parallax scroll library -->
+  <script src="./script/jquery.parallax-scroll.js"></script>
+  <script src="./script/js.js"></script>
+</body>
+
+</html>

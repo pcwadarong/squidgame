@@ -1,0 +1,771 @@
+@font-face {
+  font-family: 'LAB디지털';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BMDOHYEON';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* start */
+#startpage {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+}
+
+#startpage_contents{
+  position: absolute;
+	top: 55%;
+	left: 50%;
+  transform:translate(-50%,-50%);
+}
+#startpage h2{
+  font-family: 'DungGeunMo';
+  font-size: 15px;
+  margin-top: 27px;
+}
+
+#startpage button{
+  font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+  font-size: 25px;
+  margin-top: 115px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* header */
+header {
+  position: relative;
+  background-color: #E63F7B;
+  text-align: center;
+  height: 1080px;
+  width: 100%;
+}
+
+header> img {
+  width: 800px;
+  margin-top: 200px;
+  transition: all 0.5s;
+}
+
+header> img:hover {
+  transform: scale(1.1,1.1);
+}
+
+.scroll{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  animation-name: scroll_down;
+  animation-duration:0.7s;
+  animation-direction:alternate;
+  animation-iteration-count:infinite;
+}
+
+@keyframes scroll_down {
+  0% {
+    top: 90%;
+  }
+  100% {
+    top: 91%;
+  }
+}
+
+.scroll h3{
+  color: white;
+  font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* timer */
+.timer {
+  box-sizing: content-box;
+  z-index: 999;
+  display: inline-block;
+  position: sticky;
+  top: 0px;
+  left: 82%;
+}
+
+.timer h3 {
+  /* top: 2959.333251953125px; */
+  border: 5px solid #9B9B9B;
+  padding: 8px 12px;
+  font-size: 25pt;
+  background-color: #2E2E2E;
+  border-radius: 10px;
+  color: #E56161;
+  font-family: 'LAB디지털';
+}
+
+/* navigation*/
+.menu{
+  writing-mode: vertical-rl;
+  font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+  font-size: 14px;
+  position: fixed;
+  top: 50%;
+  right: 13%; 
+  color: #767676;
+  z-index: 998;  
+}
+
+.menu_white{
+  color: white;
+}
+
+/* section */
+section {
+  font-family:'Noto Sans KR', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 64px 0px;
+  width: 1120px;
+}
+
+section h3 {
+  font-family:'BMDOHYEON';
+  font-size: 13px;
+  line-height: 25px;
+}
+
+section h2 {
+  font-family:'Apple SD Gothic Neo',arial,sans-serif;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+section:nth-of-type(2) h3 {
+  color: white;
+}
+
+/* explain_section */
+#explain_section{
+  width: 100%;
+}
+
+.contents{
+margin: 200px auto;
+line-height: 20px;
+width: 65%;
+}
+
+.explain_left {
+  text-align: justify;
+  padding: 50px 0px;
+  
+}
+
+.explain_right {
+  text-align: right;
+  padding: 50px 0px;
+}
+
+#ex_img_1{
+  width: 253px;
+  text-align: right;
+}
+
+.explain_img{
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.explain {
+  display: inline-block;
+  width: 500px;
+  margin: 0px 60px;
+}
+
+.explain span {
+  font-size: 26px;
+  font-family:'BMDOHYEON';
+  background-color:#F1F1F1;
+  padding: 5px 6px 0px 6px;
+}
+
+.explain p{
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.explain_right> .explain p{
+  text-align: justify;
+}
+
+/* dalgona_making */
+#dalgona_making{
+  background-color:#558A63;
+  height: 5560px;
+  width: 100%;
+  color:white;
+}
+
+.ingredients{
+  width: 856.07px;
+  margin: 140px auto;
+}
+.ingredients p{
+  font-family:'BMDOHYEON';
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.ingredient{
+  display: inline-block;
+  margin-bottom: 70px;
+}
+
+#dalgona_making .ingredient:nth-of-type(2){
+  margin-left:54px;
+}
+
+.ingredient:nth-of-type(5){
+  margin-left:34px;
+}
+
+.making{ 
+  position: relative;
+  margin: 0 auto;
+  padding-top: 60px;
+  width: 1120px;
+  transition: opacity 0.2s;
+}
+
+.method_cover.method{
+  position: absolute;
+  width: inherit;
+  transition: opacity 0.2s;
+}
+
+.method img{
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+
+.method span{
+  position: absolute;
+  right: 0px;
+  top: 500px;
+  transition: opacity 0.2s;
+  font-family:'BMDOHYEON';
+  font-size: 20px;
+  line-height: 35px;
+}
+
+#mk_3{
+  top: 580px;
+  text-align: left;
+}
+
+#mk_누르개{
+  left: 210px;
+  top: -50px;
+  transition: opacity 0.3s;
+}
+
+#mk_눌린_달고나{
+  left: 160px;
+  top: 95px;
+  transition: opacity 0.5s;
+}
+
+#mk_찍기{
+  left: 270px;
+  top: 38px;
+  transition: opacity 0.5s;
+}
+
+#mk_잘린_달고나{
+  left: 110px;
+  top: 35px;
+  transition: opacity 0.5s;
+}
+
+/* successpage */
+.successpage {
+  width: 100%;
+  height: 1080px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.successpage_contents{
+  position: absolute;
+	top: 40%;
+	left: 50%;
+  transform:translate(-50%,-50%);
+}
+.successpage h1{
+  font-family: 'DungGeunMo';
+  font-size: 60px;
+  margin-top: 60px;
+}
+
+.successpage p{
+  font-family: 'DungGeunMo';
+  font-size: 25px;
+  margin-top: 27px;
+}
+
+/* drawing_yeot */
+#drawing_yeot{
+  background: linear-gradient(-30deg, black 50%, #E63F7B 50%);
+  width: 100%;
+  color:white;
+  padding-bottom: 0px;
+}
+
+.contents h3{
+  font-size: 20px;
+}
+
+#table{
+  margin: 0 auto;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 27px;
+  margin-top: 54px;
+  width: 603px;
+  
+}
+
+#table button{
+  font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+  font-size: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 122px;
+  height: 122px;
+  border: 2px solid white;
+  margin: -1px -4px;
+}
+
+#table button:nth-of-type(1){
+  border-top-left-radius: 27px;
+}
+
+#table button:nth-of-type(5){
+  border-top-right-radius: 27px;
+}
+
+#table button:nth-of-type(16){
+  border-bottom-left-radius: 27px;
+}
+
+#table button:nth-of-type(20){
+  border-bottom-right-radius: 27px;
+}
+
+#table button:focus{
+  background-color: #E63F7B;
+}
+
+#roulette_button.selected{
+  background-color: aquamarine;
+}
+
+#roulette{
+  margin-top: 389px;
+  position: relative;
+  display: inline-block;
+  transition: transform 1s;
+}
+
+#roulette svg{
+  position: absolute;
+  left: 48%;
+}
+
+#roulette button{
+  position: absolute;
+  left: 50%;
+  top: 49.8%;
+  font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  transform:translate(-50%,-50%);
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background-color: #E63F7B;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#rouletteimg{
+  transition: transform 1s;
+}
+
+#second_failed{
+  display: none;
+  width: 100%;
+  height: 1080px;
+  background-color: black;
+  text-align: center;
+  position: relative;
+}
+
+#second_failed .successpage_contents{
+  position: absolute;
+	top: 50%;
+	left: 50%;
+  transform:translate(-50%,-50%);
+  width:770px;
+  height: 770px;
+  background-color: #E63F7B;
+  border-radius: 50%;
+  
+}
+
+#second_failed h1{
+  position: absolute;
+  top: 47%;
+	left: 50%;
+  transform:translate(-50%,-50%);
+  font-size:200px;
+  font-family:'BMDOHYEON';
+}
+
+#failed{
+  position: absolute;
+  top: 72%;
+	left: 50%;
+  transform:translate(-50%,-50%);
+  font-size:25px;
+  font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+  background-color: #E63F7B;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#failed span{
+  margin-right: 20px;
+}
+
+ /* dalgona coffee */
+ #dalgona_coffee{
+   height: 9263px;
+   background-color: white;
+ }
+
+ #dalgona_coffee .ingredients{
+   margin: 230px auto 665px auto;
+   width: 963px;
+   height: 360px;
+ }
+
+#sugar{
+  margin: 0px 50px 0px 53px;
+}
+
+#milk{
+  margin-right: 60px;
+}
+
+.making2{
+  width: 853px;
+  margin: 0 auto;
+}
+
+.method2{
+  position: relative;
+  width: inherit;
+  height:363px;
+  margin-bottom: 700px;
+}
+
+.method2 span{
+  font-family:'BMDOHYEON';
+  font-size: 20px;
+  line-height: 35px;
+  transition: opacity 0.5s;
+}
+
+#cf_1 img{
+  position: absolute;
+  right: 0px;
+}
+
+#cf_1 span{
+  position: absolute;
+  left: 0px;
+  top: 210px;
+}
+
+#cf_2 img{
+  position: absolute;
+  left: 0px;
+}
+
+#cf_2 span{
+  position: absolute;
+  right: 0px;
+  top: 180px;
+  
+}
+
+#cf_2 span:nth-of-type(2){
+  position: absolute;
+  right: 40px;
+  top: 260px;
+  font-size:15px;
+  color:#7D7D7D;
+}
+
+#scrollbar{
+  background-color:#558A63;
+  width: 410px;
+  height: 19px;
+  border-radius: 28px;
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#gauge{
+  position: absolute;
+  top: 0px;
+  left: -1080px;
+  background-color:#E63F7B;
+  width: 1080px;
+  height: inherit;
+  border-radius: inherit;
+  
+}
+
+#cf_3 span{
+  font-size: 20px;
+  font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+  font-weight: bold;
+  color: #2a2a2a;
+  opacity: 100%;
+}
+
+.method2:nth-of-type(4){
+  margin-top: 2500px;
+}
+
+.method2_1{
+  position: absolute;
+  height: 0px;
+  width: inherit;
+}
+
+#cf_4 > span{
+  display: block;
+}
+
+#cf_4 img{
+  margin-top: 70px;
+}
+
+#cf_5 img{
+  position: absolute;
+  right: 30px;
+}
+
+#cf_5 span{
+  position: absolute;
+  top: 200px;
+  left: 30px;
+}
+
+#cf_6 img{
+  position: absolute;
+  left: 32px;
+  top: -40px;
+}
+
+#cf_6 span{
+  position: absolute;
+  top: 200px;
+  right: 80px;
+}
+
+ /* final */
+ #final {
+  width: 100%;
+  height: 733px;
+  background-color: #558A63;
+  text-align: center;
+  position: relative;
+}
+
+.final_contents{
+  position: absolute;
+	top: 50%;
+	left: 50%;
+  transform:translate(-50%,-50%);
+}
+
+#final h1{
+  font-family: 'DungGeunMo';
+  font-size: 80px;
+  margin-top: 45px;
+}
+
+#final p{
+  font-family: 'DungGeunMo';
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+#final_img img{
+  padding: 100px 15px 0px 15px;
+  vertical-align: middle;
+}
+
+ /* footer */
+footer{
+  position: relative;
+  background-color: #336340;
+  padding: 10px;
+  font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+  color: white;
+  padding: 40px 0px 90px 0px;
+  text-align: center;
+}
+
+#footer{
+  display: inline-block !important; 
+  text-align: left;
+}
+
+.footer_contents{
+  display: inline-block;
+  vertical-align: top;
+  padding: 50px 167px 0px 0px;
+}
+
+footer h1{
+  font-size: 35px;
+  padding-bottom: 57.68px;
+  font-weight: bold;
+}
+
+footer h3{
+  font-size: 10px;
+  padding-bottom: 31.36px;
+  cursor: pointer;
+}
+
+footer a{
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  display: block;
+  padding-bottom: 14px;
+}
+
+footer svg{
+ margin-left: 30px;
+ cursor: pointer;
+}
+
+footer svg:first-of-type{
+  margin-left: 0px;
+}
+
+a#MOVE_TOP_BTN {
+  position: absolute;
+  right: 60px;
+  bottom: 50px;
+  z-index: 998;
+}
+
+
+@media all and (max-width:1023px) {
+  header> img{
+    width: 70%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #explain_section .contents {
+    margin: 100px auto;
+  }
+  .explain_img{
+    padding: 20px;
+  }
+
+  .explain {
+    width: 80%;
+  }
+  .ingredients{
+    width: 80%;;
+  }
+
+  .footer_contents:nth-of-type(2){
+    display: none;
+  }
+
+  #final_img img{
+    width: 30%;
+  }
+
+  #final_img img:nth-of-type(3){
+    width: 25%;
+  }
+  #footer{
+    padding-left: 100px;
+  }
+}
